@@ -1,0 +1,119 @@
+char getRandomCharacter();
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+char getRandomCharacter(){
+    int r = (rand() % 26) + 65;
+    return (char)r;
+}
+
+void main(){
+
+    int randomNum,a,b,c,d,q,w,e,r,j;
+    char wordSearch[11][11],word1[8],word2[8],word3[8],word4[8];
+   
+    printf("enter only 4 eight lettered words   \n\n");
+    printf("enter 1st word: ");
+    scanf("%s",word1);
+    a=strlen(word1);
+    printf("lenght of word %d", a);
+    printf("\nenter 2st word: ");
+    scanf("%s",word2);
+    b=strlen(word2);
+    printf("lenght of word %d", b);
+    printf("\nenter 3st word: ");
+    scanf("%s",word3);
+    c=strlen(word3);
+    printf("lenght of word %d", c);
+    printf("\nenter 4st word: ");
+    scanf("%s",word4);
+    d=strlen(word4);
+    printf("lenght of word %d", d);
+    printf("\n\tA\tB\tC\tD\tE\tF\tG\tH\tI\n\n");
+    //for numbers
+    for(int i=1; i<3; i++){
+        printf("\n%d\t", i-1);
+
+        for(int j=0; j<9; j++){
+            char c=getRandomCharacter();
+            wordSearch[i][j]=c;
+            printf("%c\t", *(&(wordSearch[i][j])));
+        }
+        printf("\n\n");
+    }
+//for word3 
+    for(int i=3; i<4; i++){
+        printf("\n%d\t", i-1);
+        for(int j=c; j<9; j++){
+            char c=getRandomCharacter();
+            wordSearch[i][j]=c;
+            printf("%c\t", *(&(wordSearch[i][j])));
+        }
+        for(int n=0;n<=c;n++){
+            printf("%c\t",word3[n]);}
+        printf("\n\n");
+    }
+    
+    for(int i=4; i<5; i++){
+        printf("\n%d\t", i-1);
+
+        for(int j=0; j<9; j++){
+            char c=getRandomCharacter();
+            wordSearch[i][j]=c;
+            printf("%c\t", *(&(wordSearch[i][j])));
+        }
+        printf("\n\n");
+    }
+    
+//for word1
+    for(int i=5; i<6; i++){
+        printf("\n%d\t", i-1);
+        for(int j=a; j<9; j++){
+            char c=getRandomCharacter();
+            wordSearch[i][j]=c;
+            printf("%c\t", *(&(wordSearch[i][j])));}
+        for(int n=0;n<=a;n++){
+               printf("%c\t",word1[n]);
+           }
+        printf("\n\n");
+    }
+    
+    for(int i=6; i<7; i++){
+        printf("\n%d\t", i-1);
+
+        for(int j=0; j<9; j++){
+            char c=getRandomCharacter();
+            wordSearch[i][j]=c;
+            printf("%c\t", *(&(wordSearch[i][j])));
+        }
+        printf("\n\n");
+    }
+//for word4  
+    for(int i=9; i<10; i++){
+        printf("\n%d\t", i-1);
+        for(int n=0;n<d;n++){
+               printf("%c\t",word4[n]);}
+        for(int j=d; j<9; j++){
+            char c=getRandomCharacter();
+            wordSearch[i][j]=c;
+            printf("%c\t", *(&(wordSearch[i][j])));}
+        
+        printf("\n\n");
+    }
+    
+    
+//for word2
+    for(int i=7; i<8; i++){
+        printf("\n%d\t", i-1);
+        for(int j=b; j<9; j++){
+            char c=getRandomCharacter();
+            wordSearch[i][j]=c;
+            printf("%c\t", *(&(wordSearch[i][j])));}
+        for(int n=0;n<=b;n++){
+               printf("%c\t",word2[n]);}
+        printf("\n\n");
+    }
+    return ;
+}

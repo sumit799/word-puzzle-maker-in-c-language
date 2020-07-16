@@ -13,7 +13,7 @@ void main(){
 
     int randomNum,a,b,c,d,q,w,e,r,j;
     char wordSearch[11][11],word1[8],word2[8],word3[8],word4[8];
-   
+    printf("A SIMPLE WORD PUZZLE CALCULATOR IN C BY SUMIT");
     printf("enter only 4 eight lettered words   \n\n");
     printf("enter 1st word: ");
     scanf("%s",word1);
@@ -31,8 +31,9 @@ void main(){
     scanf("%s",word4);
     d=strlen(word4);
     printf("lenght of word %d", d);
+    //FOR ALPHABETS IN ROW
     printf("\n\tA\tB\tC\tD\tE\tF\tG\tH\tI\n\n");
-    //for numbers
+    //FOR NUMBERS IN COLUMNS
     for(int i=1; i<3; i++){
         printf("\n%d\t", i-1);
 
